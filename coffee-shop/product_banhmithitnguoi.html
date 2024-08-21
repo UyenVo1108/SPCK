@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm - Bánh Mì Thịt Nguội</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- MODAL LOGIN  -->
+    <div
+      class="modal fade"
+      id="formlogin"
+      tabindex="-1"
+      aria-labelledby="ModalFormLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <div class="myform bg-dark">
+              <h1 class="text-center">Login Form</h1>
+              <form>
+                <div class="mb-3 mt-4">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <button type="submit" class="btn btn-light mt-3">LOGIN</button>
+                <p>Not a member? <a href="#">Signup now</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL  -->
+    <div
+      class="offcanvas offcanvas-top"
+      tabindex="-1"
+      id="offcanvasTopSearch"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div
+        class="offcanvas-body d-flex justify-content-center align-items-center"
+      >
+        <form class="d-flex w-50 justify-content-center" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="d-block btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar navbar-expand-lg shadow-lg bg-white">
+        <div class="container d-flex">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5390/5390613.png"
+              alt=""
+              height="32"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link fs-5 fw-medium text-dark"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-medium text-dark" href="#">Cafe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-medium text-dark" href="#">Trà</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fs-5 fw-medium text-dark"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul>
+                    <li>
+                      <a class="dropdown-item title-header-dropdwon" href="#"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a class="dropdown-item title-header-dropdwon" href="#"
+                        >Another action</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a class="dropdown-item title-header-dropdwon" href="#"
+                        >Something else here</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mega Menu Link</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="ms-auto">
+              <div
+                class="header-top-right d-flex align-items-center gap-3 fs-5 fw-medium navbar-nav"
+              >
+                <div
+                  href=""
+                  class="d-flex align-items-center gap-2 hover-list cursor fw-medium"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasTopSearch"
+                  aria-controls="offcanvasTop"
+                >
+                  <ion-icon
+                    class="fs-5 fw-medium"
+                    name="search-outline"
+                  ></ion-icon>
+                  <span>Search</span>
+                </div>
+                <div
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                  id="cart-click"
+                  href=""
+                  class="header-top-right-item header-cart d-flex align-items-center gap-2 hover-list cursor"
+                >
+                  <ion-icon
+                    class="fs-5 fw-medium"
+                    name="cart-outline"
+                  ></ion-icon>
+                  <span>Cart</span>
+                </div>
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown hover-list">
+                    <a
+                      class="account nav-link d-flex align-items-center gap-2 text-dark"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <ion-icon class="fs-4" name="person-outline"></ion-icon>
+                      <span>Account</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="d-flex flex-column">
+                        <li>
+                          <a class="dropdown-item" href="#!signup">Register</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#!checkout"
+                            >Checkout</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <button
+                            type="button"
+                            class=""
+                            data-bs-toggle="modal"
+                            data-bs-target="#formlogin"
+                          >
+                            <p class="dropdown-item" href="">Login</p>
+                          </button>
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="product">
+              <div class="product__image">
+                <img
+                  src="https://product.hstatic.net/1000075078/product/1638440015_banh-mi-vietnam_c2c0df621edd437eb2bdebadea88e48b.jpg"
+                  alt="Bánh Mì Thịt Nguội"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="product__info">
+              <h2 class="product__name">Bánh Mì Thịt Nguội</h2>
+              <p class="product__description">
+                Bánh mì thịt nguội là một món ăn phổ biến và ngon miệng. Với lớp
+                bánh mì giòn tan, phủ một lớp sốt mayonnaise thơm ngon, và nhân
+                thịt nguội tươi ngon, bánh mì thịt nguội là một sự lựa chọn
+                tuyệt vời cho bữa ăn sáng hoặc bữa ăn nhẹ.
+              </p>
+              <p class="product__price">Giá: 30.000đ</p>
+              <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-5 shadow-lg bg-body-tertiary rounded">
+      <div class="container">
+        <div class="footer__top row g-3">
+          <ul class="footer__nav col-lg-3 col-sm-6">
+            <li>
+              <a
+                class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                ><ion-icon name="call-outline"></ion-icon> Hotline: 1800 6936</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                ><ion-icon name="location-outline"></ion-icon> Địa chỉ:</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >Tầng 3-4 Hub Building</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >195/10E Điện Biên Phủ,</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >P.15, Q.Bình Thạnh, TP. Hồ Chí Minh</a
+              >
+            </li>
+          </ul>
+          <ul class="footer__nav col-lg-3 col-sm-6">
+            <li>
+              <a
+                class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >Liên hệ</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >Cửa hàng</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >Sản phẩm</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+                >Tin tức</a
+              >
+            </li>
+          </ul>
+          <ul class="footer__nav col-lg-3 col-sm-6">
+            <li>
+              <a
+                class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0"
+                href="#"
+              ></a>
+            </li>
+          </ul>
+          <div class="footer__nav col-lg-3 col-sm-6 icon-flex d-flex">
+            <!-- Thêm các liên kết mạng xã hội của bạn ở đây -->
+            <a href="#"
+              ><ion-icon
+                class="social-icon fs-3"
+                name="logo-facebook"
+              ></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon
+                class="social-icon fs-3"
+                name="logo-instagram"
+              ></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon class="social-icon fs-3" name="logo-twitter"></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon class="social-icon fs-3" name="logo-github"></ion-icon
+            ></a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>
+            Bản quyền © 2024 The Coffee House. Đã đăng ký bản quyền. Mọi quyền
+            được bảo lưu.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

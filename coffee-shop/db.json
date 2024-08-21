@@ -1,0 +1,72 @@
+{
+    "product": [
+      { 
+        "id": 1, 
+        "name": "Bơ Sữa Phô Mai Tươi", 
+        "image": "https://product.hstatic.net/1000075078/product/1719929441_bo-sua-pmt_77e27a929b5340e5bc7b83bb1963f0eb_large.jpg",
+        "price": 100000, 
+        "priceOld": 120000,
+        "category": "coffee"
+      },
+      { 
+        "id": 2, 
+        "name": "Dâu Phô Mai Tươi", 
+        "image": "https://product.hstatic.net/1000075078/product/1717387639_dau-pho-mai_de092bfb88614bf1bfe9bd9defc6522f_large.jpg",
+        "price": 50000, 
+        "priceOld": 55000,
+        "category": "coffee"
+      },
+      { 
+        "id": 3, 
+        "name": "Hi-Tea Vải", 
+        "image": "https://product.hstatic.net/1000075078/product/1669736893_hi-tea-vai_55fe506ad4154010bb804874f3646d0a_large.png",
+        "price": 50000, 
+        "priceOld": 55000,
+        "category": "coffee"
+      },
+      { 
+        "id": 4, 
+        "name": "Cà Phê Sữa Đá", 
+        "image": "https://product.hstatic.net/1000075078/product/1669736835_ca-phe-sua-da_e6168b6a38ec45d2b4854d2708b5d542_large.png",
+        "price": 50000, 
+        "priceOld": 55000,
+        "category": "coffee"
+      },
+      { 
+        "id": 5, 
+        "name": "Cơm Chiên Hải Sản", 
+        "image": "https://product.hstatic.net/1000075078/product/1709023492_com-chien-hai-san_d29c580e49f5478fa6f5e45468f87977_large.jpg",
+        "price": 40000, 
+        "priceOld": 50000,
+        "category": "banhngot"
+      }
+      ,
+      { 
+        "id": 6, 
+        "name": "Mochi Kem Chocolate", 
+        "image": "https://product.hstatic.net/1000075078/product/1655348107_mochi-choco_c5b7415afeeb4ce29271e5fb7de4ad23_large.jpg",
+        "price": 19000, 
+        "priceOld": 25000,
+        "category": "banhngot"
+      }
+      ,
+      { 
+        "id": 7, 
+        "name": "Mochi Kem Phúc Bồn Tử", 
+        "image": "https://product.hstatic.net/1000075078/product/1643102019_mochi-phucbontu_8c3717ee0f4e4e48a28198aa6185490b_large.jpg",
+        "price": 19000, 
+        "priceOld": 25000,
+        "category": "banhngot"
+      }
+      ,
+      { 
+        "id": 8, 
+        "name": "Mochi Kem Việt Quất", 
+        "image": "https://product.hstatic.net/1000075078/product/1643102034_mochi-vietquat_0d8a5994481f4b8d82e5c45205f440c7_large.jpg",
+        "price": 19000, 
+        "priceOld": 25000,
+        "category": "banhngot"
+      }
+    ]
+  }
+  

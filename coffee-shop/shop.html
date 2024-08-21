@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon/icon.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/js/login.js">
+  <link rel="stylesheet" href="assets/js/signup.js">
+  <style>
+    .modal-body {
+      position: relative;
+    }
+
+    .myform {
+      padding: 20px;
+    }
+
+    .input-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- MODAL VIEW CART  -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">View Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <div class="overlay-cart-top">
+        <ul class="modal-cart-list px-0" id="viewCartModal">
+          <!-- <li
+              class="list-group-item mx-1 my-4 modal-cart-item border-bottom border-secondary border-2 mb-3 pb-3"
+            >
+              <div class="row">
+                <div class="col-4 overflow-hidden rounded-2">
+                  <img src="img/img1.jpg" class="img-cover" alt="" width="80" />
+                </div>
+                <div class="col-8">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h3 class="modal-product-name fs-6">Fresh Pomearanate</h3>
+                    <code class="cursor remove-pro"
+                      ><ion-icon class="fs-5" name="close-outline"></ion-icon
+                    ></code>
+                  </div>
+                  <span class="modal-product-price">
+                    <span>123.000</span>Đ
+                  </span>
+                  <span class="modal-product-price-old">
+                    <del>155.000</del>Đ
+                  </span>
+
+                  <div class="modal-cart-qty text-center mt-1">
+                    <div
+                      class="modal-cart-qty-plus-minus border rounded-2 m-0 d-flex align-items-center justify-content-center border-1"
+                    >
+                      <button type="button" class="">
+                        <ion-icon name="add-outline"></ion-icon>
+                      </button>
+                      <input
+                        type="text"
+                        name=""
+                        value="1"
+                        minlength="1"
+                        maxlength="20"
+                        class="quatityViewCart text-center border-0"
+                        id=""
+                      />
+                      <button type="button" class="">
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+        </ul>
+      </div>
+      <div class="modal-cart-bottom border-top border-secondary border-2 pt-3">
+        <div class="modal-cart-sub-total">
+          <!-- <div
+              class="d-flex justify-content-between py-2 align-items-between"
+            >
+              <h5 class="fs-6 fw-normal text-border-color">Sub-Total:</h5>
+              <span class="fw-bold fs-6">$300.00</span>
+            </div> -->
+          <!-- <div
+              class="d-flex justify-content-between py-2 align-items-between"
+            >
+              <h5 class="fs-6 fw-normal text-border-color">VAT (20%) :</h5>
+              <span class="fw-bold fs-6">$60.00</span>
+            </div> -->
+          <div class="d-flex justify-content-between py-2 align-items-between">
+            <h5 class="fs-6 fw-normal text-border-color">Sub-Total</h5>
+            <span class="fw-bold fs-6 totalCartViewShow">0</span>Đ
+          </div>
+        </div>
+        <div class="modal-cart-btn d-flex justify-content-between gap-3 mb-3">
+          <button type="button" class="btn btn-success fw-bolder w-50 text-white">
+            View Cart
+          </button>
+          <button type="button" class="btn border-success fw-bolder w-50 text-success">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL  -->
+  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopSearch" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex justify-content-center align-items-center">
+      <form class="d-flex w-50 justify-content-center" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="d-block btn btn-outline-success" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+  <header>
+
+    <nav class="navbar navbar-expand-lg shadow-lg bg-white">
+      <div class="container d-flex">
+        <a class="navbar-brand" href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/5390/5390613.png" alt="" height="50" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-medium text-dark" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-medium text-dark" href="#">Cafe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-medium text-dark" href="#">Trà</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fs-5 fw-medium text-dark" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul>
+                  <li>
+                    <a class="dropdown-item title-header-dropdwon" href="#">Cafe</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cafe sữa</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cafe đen</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bạc sỉu</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Americano</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a class="dropdown-item title-header-dropdwon" href="#">Tea</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Trà xanh</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Trà thảo mộc</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Trà lài</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a class="dropdown-item title-header-dropdwon" href="#">Thức ăn nhẹ</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bánh mì thịt nguội</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Khoai chiên</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bánh mì que</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Tiramisu</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="ms-auto">
+            <div class="header-top-right d-flex align-items-center gap-3 fs-5 fw-medium navbar-nav">
+              <div href="" class="d-flex align-items-center gap-2 hover-list cursor fw-medium"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopSearch" aria-controls="offcanvasTop">
+                <ion-icon class="fs-5 fw-medium" name="search-outline"></ion-icon>
+                <span>Search</span>
+              </div>
+              <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                id="cart-click" href=""
+                class="header-top-right-item header-cart d-flex align-items-center gap-2 hover-list cursor">
+                <div class="header-cart position-relative cursor" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                  <ion-icon class="fs-4" name="cart-outline"></ion-icon>
+                  <span id="quantity"
+                    class="quantity bg-success text-white position-absolute py-1 px-2 rounded-circle top-0 start-100 translate-middle">0</span>
+                </div>
+                <span>Cart</span>
+              </div>
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown hover-list">
+                  <a class="account nav-link d-flex align-items-center gap-2 text-dark" href="#" id="navbarDropdown"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <ion-icon class="fs-4" name="person-outline"></ion-icon>
+                    <span id="accountText">Account</span>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="d-flex flex-column" id="accountOptions">
+                      <!-- <li>
+                          <a class="dropdown-item" href="#!checkout"
+                            >Checkout</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <button
+                            type="button"
+                            class=""
+                            data-bs-toggle="modal"
+                            data-bs-target="#formlogin"
+                          >
+                            <p class="dropdown-item" href="">Login</p>
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            type="button"
+                            class=""
+                            data-bs-toggle="modal"
+                            data-bs-target="#signupModal"
+                          >
+                            <p class="dropdown-item" href="">Register</p>
+                          </button>
+                        </li> -->
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container-fluid p-0">
+    <img class="w-100"
+      src="https://phuclong.com.vn/uploads/banner/970f1ea2f7fe43-pl_posm_popa4_phuclong_bday_2024_v2_1920x576px.jpg"
+      alt="">
+  </section>
+
+  <section class="container mt-3">
+    <div class="row">
+
+
+      <div class="col-lg-3  col-sm-12">
+        <div class="shadow-lg rounded-3 content p-3">
+          <h3 class="fs-4">Danh mục</h3>
+          <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label fs-5" for="flexCheckDefault">
+              All
+            </label>
+          </div>
+          <div class="form-check ">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label fs-5" for="flexCheckDefault">
+              Coffee
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label fs-5" for="flexCheckChecked">
+              Bánh ngọt
+            </label>
+          </div>
+
+          <button class="btn btn-success mt-3 fw-medium">Lọc Sản phẩm</button>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="shadow-sm rounded-3 content p-3">
+          <form id="searchForm" class="from-search d-flex align-items-center justify-content-end mb-3 gap-3 ">
+            <input type="text" class="form-control border px-3 border-1 w-25" name=""  id="searchInput">
+            <button type="submit" class="btn btn-success">Search</button>
+          </form>
+          <div class="row g-3" id="resultProduct">
+            <!-- <div class="col-xl-3 col-lg-4 col-sm-6">
+                      <div class="card border-0" >
+                        <img src="https://product.hstatic.net/1000075078/product/1719929441_bo-sua-pmt_77e27a929b5340e5bc7b83bb1963f0eb_large.jpg" height="200" class="card-img-top" alt="..." />
+                        <div class="card-body p-0 d-flex justify-content-between align-items-center mt-2">
+                            <div class="">
+
+                                <h5 class="card-title">Name</h5>
+                                <div class="price">
+                                    <span class="price-sale">123000 đ</span>
+                                    <span class="price-old">155000 đ</span>
+                                </div>
+                            </div>
+                          <a href="#" class="btn btn-success"><ion-icon name="add-outline" class="text-white"></ion-icon></a>
+                        </div>
+                      </div>
+                    </div> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <footer class="footer mt-5 shadow-lg bg-body-tertiary rounded">
+    <div class="container">
+      <div class="footer__top row g-3">
+        <ul class="footer__nav col-lg-3 col-sm-6">
+          <li>
+            <a class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#"><ion-icon
+                name="call-outline"></ion-icon> Hotline: 1800 6936</a>
+          </li>
+          <li>
+            <a class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#"><ion-icon
+                name="location-outline"></ion-icon> Địa chỉ:</a>
+          </li>
+          <li>
+            <a class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">Tầng 3-4 Hub
+              Building</a>
+          </li>
+          <li>
+            <a class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">195/10E Điện Biên
+              Phủ,</a>
+          </li>
+          <li>
+            <a class="link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">P.15, Q.Bình Thạnh, TP.
+              Hồ Chí Minh</a>
+          </li>
+        </ul>
+        <ul class="footer__nav col-lg-3 col-sm-6">
+          <li>
+            <a class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">Trang
+              chủ</a>
+          </li>
+          <li>
+            <a class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">Liên
+              hệ</a>
+          </li>
+          <li>
+            <a class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">Cửa
+              hàng</a>
+          </li>
+          <li>
+            <a class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">Sản
+              phẩm</a>
+          </li>
+          <li>
+            <a class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#">Tin
+              tức</a>
+          </li>
+        </ul>
+        <ul class="footer__nav col-lg-3 col-sm-6">
+          <li>
+            <a class="footer-source link-dark fw-medium fs-6 link-underline link-underline-opacity-0" href="#"></a>
+          </li>
+        </ul>
+        <div class="footer__nav col-lg-3 col-sm-6 icon-flex d-flex">
+          <!-- Thêm các liên kết mạng xã hội của bạn ở đây -->
+          <a href="#"><ion-icon class="social-icon fs-3" name="logo-facebook"></ion-icon></a>
+          <a href="#"><ion-icon class="social-icon fs-3" name="logo-instagram"></ion-icon></a>
+          <a href="#"><ion-icon class="social-icon fs-3" name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon class="social-icon fs-3" name="logo-github"></ion-icon></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>
+          Bản quyền © 2024 The Coffee House. Đã đăng ký bản quyền. Mọi quyền
+          được bảo lưu.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="
+    https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js
+    "></script>
+  <link href="
+    https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css
+    " rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/login.js"></script>
+  <script src="assets/js/signup.js"></script>
+  <script>
+    //header
+    document.addEventListener("DOMContentLoaded", function () {
+      const userData = localStorage.getItem('UserData');
+      const accountText = document.getElementById('accountText');
+      const accountOptions = document.getElementById('accountOptions');
+
+      if (userData) {
+        const user = JSON.parse(userData);
+        const username = user.firstname.concat(` ${user.lastname}`)
+
+        accountText.textContent = username;
+
+        accountOptions.innerHTML = `
+        
+        <li>
+          <a class="dropdown-item" href="#!checkout">Checkout</a>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <button type="button" class="dropdown-item" id="logoutButton">Logout</button>
+        </li>
+      `;
+
+        document.getElementById('logoutButton').addEventListener('click', function () {
+          localStorage.removeItem('UserData');
+          window.location.href = 'login.html';
+        });
+
+      } else {
+        accountText.textContent = 'Account';
+
+        accountOptions.innerHTML = `
+        <li>
+          <a class="dropdown-item" href="#!checkout">Checkout</a>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <button type="button" class="" data-bs-toggle="modal" data-bs-target="#formlogin">
+            <p class="dropdown-item" href="">Login</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="" data-bs-toggle="modal" data-bs-target="#signupModal">
+            <p class="dropdown-item" href="">Register</p>
+          </button>
+        </li>
+      `;
+      }
+    });
+  </script>
+</body>
+
+</html>

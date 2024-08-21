@@ -1,0 +1,16 @@
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
