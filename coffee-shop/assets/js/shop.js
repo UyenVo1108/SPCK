@@ -19,7 +19,7 @@ function showdata(data) {
   data.forEach((item) => {
     htmlProduct += ` <div class="col-xl-3 col-lg-4 col-sm-6">
                       <div class="card border-0" >
-                        <img src="${item.image}" height="200" class="card-img-top" alt="..." />
+                        <img data-id="${item.id}" src="${item.image}" height="200" class="card-img-top product-image" alt="..." />
                         <div class="card-body p-0 d-flex justify-content-between align-items-center mt-2">
                             <div class="">
                              <input type="hidden" class="category" name="" value="${item.category}">
@@ -35,13 +35,26 @@ function showdata(data) {
                     </div>`;
   });
   resultProduct.innerHTML = htmlProduct;
+  //DETAIL
+  const productImages = document.querySelectorAll(".product-image");
+    productImages.forEach((image) => {
+      image.addEventListener("click", () => {
+        const productId = image.getAttribute("data-id");
+        const product = data.find(item => item.id == productId);
+        
+        // Lưu thông tin sản phẩm vào localStorage
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        
+        // Chuyển hướng đến trang detail.html
+        window.location.href = "detail.html";
+      });
+    });
   ///LOGIC GIO HANG
   const addToCartButtons = document.querySelectorAll(".addcart");
   addToCartButtons.forEach((button) => {
     button.addEventListener("click", addToCart);
   });
 }
-
 ///
 function addToCart(event) {
   const button = event.target;
