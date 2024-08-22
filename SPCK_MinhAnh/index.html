@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/app.css" />
+    <title>index</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- modal  -->
+    <div
+      class="offcanvas offcanvas-top"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div
+        class="offcanvas-body d-flex justify-content-center align-items-center"
+      >
+        <form
+          id="searchForm"
+          class="d-flex w-50 justify-content-center"
+          role="search"
+        >
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="searchInput"
+          />
+          <button type="submit" class="btn btn-success">Search</button>
+        </form>
+      </div>
+    </div>
+    <!-- MODAL VIEW CART  -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">View Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <div class="overlay-cart-top">
+          <ul class="modal-cart-list px-0" id="viewCartModal">
+            <!-- <li
+                class="list-group-item mx-1 my-4 modal-cart-item border-bottom border-secondary border-2 mb-3 pb-3"
+              >
+                <div class="row">
+                  <div class="col-4 overflow-hidden rounded-2">
+                    <img src="img/img1.jpg" class="img-cover" alt="" width="80" />
+                  </div>
+                  <div class="col-8">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h3 class="modal-product-name fs-6">Fresh Pomearanate</h3>
+                      <code class="cursor remove-pro"
+                        ><ion-icon class="fs-5" name="close-outline"></ion-icon
+                      ></code>
+                    </div>
+                    <span class="modal-product-price">
+                      <span>123.000</span>Đ
+                    </span>
+                    <span class="modal-product-price-old">
+                      <del>155.000</del>Đ
+                    </span>
+  
+                    <div class="modal-cart-qty text-center mt-1">
+                      <div
+                        class="modal-cart-qty-plus-minus border rounded-2 m-0 d-flex align-items-center justify-content-center border-1"
+                      >
+                        <button type="button" class="">
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <input
+                          type="text"
+                          name=""
+                          value="1"
+                          minlength="1"
+                          maxlength="20"
+                          class="quatityViewCart text-center border-0"
+                          id=""
+                        />
+                        <button type="button" class="">
+                          <ion-icon name="remove-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li> -->
+          </ul>
+        </div>
+        <div
+          class="modal-cart-bottom border-top border-secondary border-2 pt-3"
+        >
+          <div class="modal-cart-sub-total">
+            <!-- <div
+                class="d-flex justify-content-between py-2 align-items-between"
+              >
+                <h5 class="fs-6 fw-normal text-border-color">Sub-Total:</h5>
+                <span class="fw-bold fs-6">$300.00</span>
+              </div> -->
+            <!-- <div
+                class="d-flex justify-content-between py-2 align-items-between"
+              >
+                <h5 class="fs-6 fw-normal text-border-color">VAT (20%) :</h5>
+                <span class="fw-bold fs-6">$60.00</span>
+              </div> -->
+            <div
+              class="d-flex justify-content-between py-2 align-items-between"
+            >
+              <h5 class="fs-6 fw-normal text-border-color">Sub-Total</h5>
+              <span class="fw-bold fs-6 totalCartViewShow">0</span>Đ
+            </div>
+          </div>
+          <div class="modal-cart-btn d-flex justify-content-between gap-3 mb-3">
+            <button
+              type="button"
+              class="btn btn-success fw-bolder w-50 text-white"
+            >
+              View Cart
+            </button>
+            <button
+              type="button"
+              class="btn border-success fw-bolder w-50 text-success"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="container-fluid header sticky-top">
+      <div class="header-main container">
+        <div class="row py-2">
+          <div class="header-logo col">
+            <img src="./images/logo-anna.svg" alt="" />
+          </div>
+          <nav class="navbar navbar-expand-sm col-8">
+            <div
+              class="collapse navbar-collapse justify-content-center align-items-center gap-2"
+              id="collapsibleNavbar"
+            >
+              <ul class="navbar-nav"></ul>
+              <li class="nav-item list-style-none">
+                <a class="nav-link fz-1 text-dark fw-600" href="#"
+                  >TRANG CHỦ
+                </a>
+              </li>
+              <li class="nav-item list-style-none">
+                <a class="nav-link fz-1 text-dark fw-600" href="#">VỀ ANNA </a>
+              </li>
+              <li class="nav-item dropdown list-style-none">
+                <a
+                  class="nav-link fz-1 text-dark fw-600 dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >SẢN PHẨM
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="list-style-none">
+                    <a class="dropdown-item" href="#">Gọng kính </a>
+                  </li>
+                  <li class="list-style-none">
+                    <a class="dropdown-item" href="#">Kính áp tròng</a>
+                  </li>
+                  <li class="list-style-none">
+                    <a class="dropdown-item" href="#">Gọng kính trẻ em </a>
+                  </li>
+                  <li class="list-style-none">
+                    <a class="dropdown-item" href="#">Tròng kính </a>
+                  </li>
+                  <li class="list-style-none">
+                    <a class="dropdown-item" href="#">Kính râm </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item list-style-none">
+                <a class="nav-link fz-1 text-dark fw-600" href="#">STORE </a>
+              </li>
+              <li class="nav-item list-style-none">
+                <a class="nav-link fz-1 text-dark fw-600" href="#">BLOG </a>
+              </li>
+              <li class="nav-item list-style-none">
+                <a class="nav-link fz-1 text-dark fw-600" href="#"
+                  >HÀNH TRÌNH TỰ TẾ
+                </a>
+              </li>
+            </div>
+          </nav>
+          <div
+            class="header-right col d-flex align-items-center justify-content-end"
+          >
+            <div class="header-icon d-flex align-items-center gap-4">
+              <div
+                href=""
+                class="d-flex align-items-center text-success gap-2 hover-list cursor"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasSearch"
+                aria-controls="offcanvasTop"
+              >
+                <ion-icon class="fs-4" name="search"></ion-icon>
+              </div>
+
+              <div
+                class="header-cart position-relative cursor"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                <ion-icon class="fs-4 text-dark" name="cart-outline"></ion-icon>
+                <span
+                  id="quantity"
+                  class="quantity bg-success position-absolute py-1 px-2 rounded-circle top-0 start-100 translate-middle"
+                  >0</span
+                >
+              </div>
+              <div class="header-account d-flex align-items-center gap-2">
+                <a
+                  class="account nav-link d-flex align-items-center gap-2"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <ion-icon
+                    class="fs-4 text-dark"
+                    name="person-outline"
+                  ></ion-icon>
+                  <!-- <span id="accountText" class="text-dark">Account</span> -->
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="d-flex flex-column" id="accountOptions">
+                    <!-- <li>
+                          <a class="dropdown-item" href="#!checkout"
+                            >Checkout</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <button
+                            type="button"
+                            class=""
+                            data-bs-toggle="modal"
+                            data-bs-target="#formlogin"
+                          >
+                            <p class="dropdown-item" href="">Login</p>
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            type="button"
+                            class=""
+                            data-bs-toggle="modal"
+                            data-bs-target="#signupModal"
+                          >
+                            <p class="dropdown-item" href="">Register</p>
+                          </button>
+                        </li> -->
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header_title container-fluid bg-dark">
+      <div class="header_title-content container py-3">
+        <div
+          class="header_title-text d-flex justify-content-center align-item-center fz-1 text-white fw-200"
+        >
+          SEE BETTER THAN YESTERDAY - ANNA LOVE YOU!
+        </div>
+      </div>
+    </div>
+    <section class="slider">
+      <div class="slider-imgage container-fuild">
+        <img class="img-cover" src="./images/slide1.png" alt="" />
+        <form class="slider-search d-flex gap-3" action="" method="">
+          <input
+            class="w-20 border-dark rounded-3 text-dark fz-1 fw-500 px-2"
+            type="text"
+            name="search"
+            placeholder="Tìm kiếm sản phẩm"
+          />
+          <input class="btn button-app" type="submit" value="Tìm kiếm" />
+        </form>
+      </div>
+    </section>
+    <section class="banner pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="banner-left col position-relative">
+            <div class="banner-left_img rounded-10">
+              <img
+                class="rounded-10 img-cover"
+                src="./images/silde4.jpg"
+                alt="alt"
+              />
+            </div>
+            <button
+              class="banner-left_button position-absolute btn fw-800 fz-14 text-white"
+            >
+              CHỌN KÍNH NGAY
+            </button>
+          </div>
+          <div class="banner-right col">
+            <div class="row banner-right_body">
+              <div class="col banner-right_img rounded-10">
+                <img
+                  class="img-cover103 rounded-10"
+                  src="./images/silde7.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col banner-right_img rounded-10">
+                <img
+                  class="img-cover103 rounded-10"
+                  src="./images/silde7.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="banner-right_icon">
+                <ion-icon
+                  class="fz-3 bg-dark-50 rounded-circle"
+                  name="chevron-back-circle-outline"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hot mt-5">
+      <div class="hotProduct container rounded-top">
+        <div class="hotProduct-main container">
+          <div class="hotProduct-header py-3 d-flex justify-content-between">
+            <div class="hotProduct-header-text d-flex flex-column gap-1">
+              <span class="hotProduct-header-title fw-400 fz-1 text-white"
+                >HOT TREND</span
+              >
+              <h3 class="hotProduct-header-content fw-700">HÀNG MỚI LÊN KỆ</h3>
+            </div>
+            <div class="hotProduct-header-option d-flex align-items-center">
+              <ul class="nav gap-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-white fz-1 hotProduct-header-option-link hotProduct-header-option--active"
+                    href="#"
+                    >Mắt kính</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-white fz-1 hotProduct-header-option-link"
+                    href="#"
+                    >Gọng kính
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-white fz-1 hotProduct-header-option-link"
+                    href="#"
+                    >Kính râm
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container my-5">
+        <div class="row g-3" id="resultProduct">
+          <!-- <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Name</h5>
+                <div class="category">Áo</div>
+                <div class="">
+                  <span class="price-sale">123000</span>
+                  <span class="price-old">155000</span>
+                </div>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="hotProduct-footer py5 flex-center py-3">
+        <a href="http://">
+          <button
+            class="btn text-white fw-500 fz-1 bg-dark px-4 hotProduct-footer-btn"
+          >
+            XEM TẤT CẢ
+          </button></a
+        >
+      </div>
+    </section>
+    <section class="glassFind container py-5">
+      <div class="glassFind-header">
+        <div class="glassFind-header-content d-flex flex-column gap-1">
+          <span class="glassFind-header-title fw-400 fz-1 text-dark"
+            >CHỌN KÍNH ONLINE</span
+          >
+          <h3 class="glassFind-header-content fw-700 text-dark">
+            TÌM KÍNH PHÙ HỢP
+          </h3>
+        </div>
+      </div>
+      <div class="glassFind-body d-flex py-3 row">
+        <div class="glassFind-body-left col">
+          <div class="glassFind-body-img rounded-5">
+            <img
+              class="rounded-5 img-h411"
+              src="./images/find-1.jpg"
+              alt="alt"
+            />
+          </div>
+        </div>
+        <div class="glassFind-body-right col">
+          <div class="glassFind-body-right-content p-5 d-flex flex-column">
+            <div class="glassFind-body-right-icon flex-center">
+              <img
+                class="img-cover20 p-3 rounded-circle bg-primary-50"
+                src="./images/logo_kinh2.svg"
+                alt="alt"
+              />
+            </div>
+            <h3
+              class="glassFind-body-right-title text-dark color-primary fz-16 fw-700 flex-center"
+            >
+              Kích thước khung
+            </h3>
+            <span
+              class="glassFind-body-right-text text-dark fz-1 text-center lh-base"
+              >Chọn Kích thước khung phù hợp nhất để giúp dễ dàng vừa vặn, thoải
+              mái và tiện lợi cho bạn.</span
+            >
+            <div class="glassFind-body-right-link flex-center gap-2">
+              <span class="glassFind-body-right-link-text fz-1 text-dark fw-500"
+                >Cách đo kích thước khung hình của bạn</span
+              ><a class="unlink" href="#">
+                <ion-icon class="text-dark fz-16" name="arrow-forward-outline">
+                </ion-icon
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="glassFind-body d-flex py-3 row">
+        <div class="glassFind-body-right col">
+          <div class="glassFind-body-right-content p-5 d-flex flex-column">
+            <div class="glassFind-body-right-icon flex-center">
+              <img
+                class="img-cover20 p-3 rounded-circle bg-primary-50"
+                src="./images/icon_kinh.svg"
+                alt="alt"
+              />
+            </div>
+            <h3
+              class="glassFind-body-right-title text-dark color-primary fz-16 fw-700 flex-center"
+            >
+              Kích thước khung
+            </h3>
+            <span
+              class="glassFind-body-right-text text-dark fz-1 text-center lh-base"
+              >Chọn Kích thước khung phù hợp nhất để giúp dễ dàng vừa vặn, thoải
+              mái và tiện lợi cho bạn.</span
+            >
+            <div class="glassFind-body-right-link flex-center gap-2">
+              <span class="glassFind-body-right-link-text fz-1 text-dark fw-500"
+                >Cách đo kích thước khung hình của bạn</span
+              ><a class="unlink" href="#">
+                <ion-icon class="text-dark fz-16" name="arrow-forward-outline">
+                </ion-icon
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="glassFind-body-left col">
+          <div class="glassFind-body-img rounded-5">
+            <img
+              class="rounded-5 img-h411"
+              src="./images/find-2.jpg"
+              alt="alt"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="findMap container">
+      <div
+        class="findMap-header d-flex justify-content-between align-item-center"
+      >
+        <div class="findMap-header-left d-flex flex-column gap-1">
+          <span class="fw-400 fz-1 text-dark">ĐỊA ĐIỂM</span>
+          <h3 class="fw-700 text-dark">HỆ THỐNG CỬA HÀNG</h3>
+        </div>
+        <div class="findMap-header-right">
+          <a href="http://">
+            <button
+              class="btn text-white fw-500 fz-1 bg-dark px-4 findMap-footer-btn"
+            >
+              Tìm kiếm cơ sở
+            </button></a
+          >
+        </div>
+      </div>
+      <div class="findMap-body">
+        <div class="row findMap-body-main">
+          <div class="col-8 findMap-body-left">
+            <img
+              class="col-8 findMap-body-img img-600"
+              src="./images/store-1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-4 findMap-body-right">
+            <img
+              class="col-8 findMap-body-img img-600"
+              src="./images/store-2.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="customer container py-5">
+      <div
+        class="customer-header d-flex justify-content-between align-item-center"
+      >
+        <div class="customer-header-left d-flex flex-column gap-1">
+          <span class="fw-400 fz-1 text-dark">TÌNH THƯƠNG MẾN THƯƠNG</span>
+          <h3 class="fw-700 text-dark">KHÁCH HÀNG THÂN YÊU</h3>
+        </div>
+      </div>
+      <div class="customer-body pt-3">
+        <div class="row customer-body-main">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="images/person-1.png"
+                alt="alt"
+                height="430"
+              />
+              <div class="card-body">
+                <h5 class="fw-600 color-primary text-center card-title fz-16">
+                  Khách hàng 1
+                </h5>
+                <p class="card-text fz-12 text-dark text-center">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Officia sapiente exercitationem, aut assumenda soluta quia,
+                  quaerat veniam voluptatibus tempora harum illo ullam
+                  provident? Eligendi labore incidunt, consectetur sint ipsam
+                  molestiae?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="images/person-2.png"
+                alt="alt"
+                height="430"
+              />
+              <div class="card-body">
+                <h5 class="fw-600 color-primary text-center card-title fz-16">
+                  Khách hàng 2
+                </h5>
+                <p class="card-text fz-12 text-dark text-center">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Officia sapiente exercitationem, aut assumenda soluta quia,
+                  quaerat veniam voluptatibus tempora harum illo ullam
+                  provident? Eligendi labore incidunt, consectetur sint ipsam
+                  molestiae?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="images/person-3.png"
+                alt="alt"
+                height="430"
+              />
+              <div class="card-body">
+                <h5 class="fw-600 color-primary text-center card-title fz-16">
+                  Khách hàng 3
+                </h5>
+                <p class="card-text fz-12 text-dark text-center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur sed alias, vero dolorem consectetur inventore.
+                  Minima commodi, eligendi vitae iusto veritatis dicta dolorem
+                  odio! Dignissimos ab aperiam nulla beatae officia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="question container">
+      <div
+        class="question-header d-flex justify-content-between align-item-center"
+      >
+        <div class="question-header-left d-flex flex-column gap-1">
+          <span class="fw-400 fz-1 text-dark">HỎI ĐÁP </span>
+          <h3 class="fw-700 text-dark">KHÁCH HÀNG THÂN YÊU</h3>
+        </div>
+      </div>
+      <div class="question-body pt-3">
+        <div class="row question-body-main">
+          <div class="col-sm-6 question-body-Item pt-3">
+            <details class="p-2 rounded border-dark">
+              <summary class="text-dark fz-12 fw-500">
+                Cận thị có tự giảm không ?
+              </summary>
+              <p class="text-dark fz-1 fw-400 pt-2">
+                Mức độ tối màu của thấu kính không ảnh hưởng đến tác dụng bảo vệ
+                mắt khỏi tia cực tím. Thay vào đó, khả năng này được xác định
+                bằng công nghệ sản xuất thấu kính hoặc loại polyme nhựa của thấu
+                kính nhé bạn ơi
+              </p>
+            </details>
+          </div>
+          <div class="col-sm-6 question-body-Item pt-3">
+            <details class="p-2 rounded border-dark">
+              <summary class="text-dark fz-12 fw-500">
+                Cho em xin chi phí đo mắt bên mình nhé ?
+              </summary>
+              <p class="text-dark fz-1 fw-400 pt-2">
+                Mức độ tối màu của thấu kính không ảnh hưởng đến tác dụng bảo vệ
+                mắt khỏi tia cực tím. Thay vào đó, khả năng này được xác định
+                bằng công nghệ sản xuất thấu kính hoặc loại polyme nhựa của thấu
+                kính nhé bạn ơi
+              </p>
+            </details>
+          </div>
+          <div class="col-sm-6 question-body-Item pt-3">
+            <details class="p-2 rounded border-dark">
+              <summary class="text-dark fz-12 fw-500">
+                Vừa loạn vừa cận có cắt tròng đổi màu được không ?
+              </summary>
+              <p class="text-dark fz-1 fw-400 pt-2">
+                Mức độ tối màu của thấu kính không ảnh hưởng đến tác dụng bảo vệ
+                mắt khỏi tia cực tím. Thay vào đó, khả năng này được xác định
+                bằng công nghệ sản xuất thấu kính hoặc loại polyme nhựa của thấu
+                kính nhé bạn ơi
+              </p>
+            </details>
+          </div>
+          <div class="col-sm-6 question-body-Item pt-3">
+            <details class="p-2 rounded border-dark">
+              <summary class="text-dark fz-12 fw-500">
+                Màu của kính râm có ảnh hưởng tới chống tia cực tím không ?
+              </summary>
+              <p class="text-dark fz-1 fw-400 pt-2">
+                Mức độ tối màu của thấu kính không ảnh hưởng đến tác dụng bảo vệ
+                mắt khỏi tia cực tím. Thay vào đó, khả năng này được xác định
+                bằng công nghệ sản xuất thấu kính hoặc loại polyme nhựa của thấu
+                kính nhé bạn ơi
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer pt-5">
+      <section class="footer-top container-fluid">
+        <div
+          class="footer-top_header container d-flex justify-content-between border-bottom border-white py-3"
+        >
+          <div class="footer-top_header__left">
+            <div class="footer-top_header__logo">
+              <div class="footer-top_header__img">
+                <img src="./images/logo-text.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="footer-top_header__right d-flex align-items-center gap-4">
+            <div class="footer-top_header__email">
+              <input
+                class="footer-top_header__input fz-08 fw-500 text-white py-1 ps-1 border-2 rounded"
+                type="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="footer-top_header__signup">
+              <button
+                class="button btn-sm border-white text-white"
+                type="button"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top_body container py-3">
+          <div class="row footer-bottom_content">
+            <div class="col footer-bottom_item d-flex flex-column gap-2">
+              <h3 class="fz-1 fw-500">TẤT CẢ SẢN PHẨM</h3>
+              <a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >GỌNG KÍNH </a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >TRÒNG KÍNH</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >KÍNH GÂM </a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >GỌNG KÍNH TRẺ EM </a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >KÍNH ÁP TRÒNG</a
+              >
+            </div>
+            <div class="col footer-bottom_item d-flex flex-column gap-2">
+              <h3 class="fz-1 fw-500">HỖ TRỢ</h3>
+              <a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Tình trạng đặt hàng</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Vận chuyển và giao hàng</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Hoàn trả</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Lựa chọn thanh toán</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Số dư thẻ quà tặng</a
+              >
+            </div>
+            <div class="col footer-bottom_item d-flex flex-column gap-2">
+              <h3 class="fz-1 fw-500">VỀ CHĂM SÓC</h3>
+              <a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Tin tức</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Nghề nghiệp</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Nhà đầu tư</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Mục đích</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Sự bền vững</a
+              >
+            </div>
+            <div class="col footer-bottom_item d-flex flex-column gap-2">
+              <h3 class="fz-1 fw-500">CÔNG TY</h3>
+              <a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Về công ty</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Liên hệ chúng tôi</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Sản phẩm</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Blog</a
+              ><a
+                class="fz-08 text-white text-decoration-none justify-content-start"
+                href="#"
+                >Về Anna</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-bottom container-fluid">
+        <div
+          class="footer-bottom_body container d-flex justify-content-between py-2"
+        >
+          <div class="footer-bottom_right">
+            <div class="footer-bottom_social">
+              <div class="footer-bottom_icon d-flex gap-3">
+                <a href="http://">
+                  <ion-icon
+                    class="text-white fz-12 footer-bottom_icon__item"
+                    name="logo-facebook"
+                  ></ion-icon></a
+                ><a href="http://">
+                  <ion-icon
+                    class="text-white fz-12 footer-bottom_icon__item"
+                    name="logo-instagram"
+                  ></ion-icon></a
+                ><a href="http://">
+                  <ion-icon
+                    class="text-white fz-12 footer-bottom_icon__item"
+                    name="logo-twitter"
+                  ></ion-icon></a
+                ><a href="http://">
+                  <ion-icon
+                    class="text-white fz-12 footer-bottom_icon__item"
+                    name="logo-linkedin"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom_left d-flex align-items-center">
+            <p class="footer-bottom_left__content fz-1 fw-200">
+              © 2023 bởi mắt kính Anna tự hào được cộng tác với các chuyên gia
+              hàng đầu trong lĩnh vực
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script>
+      //header
+      document.addEventListener("DOMContentLoaded", function () {
+        const userData = localStorage.getItem("UserData");
+        // const accountText = document.getElementById("accountText");
+        const accountOptions = document.getElementById("accountOptions");
+
+        if (userData) {
+          const user = JSON.parse(userData);
+          const username = user.firstname.concat(` ${user.lastname}`);
+
+          // accountText.textContent = username;
+
+          accountOptions.innerHTML = `
+        
+        <li>
+          <div class="dropdown-item"> ${username}</div>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#!checkout">Checkout</a>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <button type="button" class="dropdown-item" id="logoutButton">Logout</button>
+        </li>
+      `;
+
+          document
+            .getElementById("logoutButton")
+            .addEventListener("click", function () {
+              localStorage.removeItem("UserData");
+              window.location.href = "signin.html";
+            });
+        } else {
+          accountText.textContent = "Account";
+
+          accountOptions.innerHTML = `
+        <li>
+          <a class="dropdown-item" href="#!checkout">Checkout</a>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          
+            <a class="dropdown-item" href="dangnhap.html">Login</a>
+         
+        </li>
+        <li>
+          
+            <a class="dropdown-item" href="dangky.html">Register</a>
+       
+        </li>
+      `;
+        }
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/cart.js"></script>
+  </body>
+</html>

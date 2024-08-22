@@ -1,0 +1,222 @@
+//thư viện chung cho dự án
+//size
+.fz-08 {
+  font-size: 0.8rem;
+}
+.fz-1 {
+  font-size: 1rem;
+}
+.fz-12 {
+  font-size: 1.2rem;
+}
+.fz-14 {
+  font-size: 1.4rem;
+}
+.fz-16 {
+  font-size: 1.6rem;
+}
+.fz-2 {
+  font-size: 2rem;
+}
+.fz-3 {
+  font-size: 3rem;
+}
+.fz-4 {
+  font-size: 4rem;
+}
+//font-we
+.fw-200 {
+  font-weight: 200;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+//css basic
+.dropdown-item {
+  padding: 1rem;
+}
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-600 {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center center;
+}
+.img-25 {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  object-position: center center;
+}
+.img-05 {
+  width: 5%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-04 {
+  width: 4%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-03 {
+  width: 3%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-h411 {
+  width: 100%;
+  height: 411px;
+  object-fit: cover;
+}
+.img-cover103 {
+  width: 100%;
+  height: 103%;
+  object-fit: cover;
+}
+.img-cover20 {
+  width: 20%;
+
+  object-fit: cover;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.border-dark {
+  border: 1px solid $bg-dark;
+}
+.rounded-10 {
+  border-radius: 1rem;
+}
+.w-5 {
+  width: 5%;
+}
+.w-20 {
+  width: 20rem;
+}
+.list-style-none {
+  list-style: none;
+}
+.unlink {
+  text-decoration: none;
+}
+//color
+.bg-dark-50 {
+  background-color: $bg-dark-50;
+}
+
+.bg-third {
+  background-color: $bg-third;
+}
+.bg-primary {
+  background-color: $bg-primary !important;
+}
+.bg-primary-50 {
+  background-color: #bfe8e3;
+}
+.text-dark-80 {
+  color: rgba(0, 0, 0, 0.45);
+}
+.color-primary {
+  color: $bg-primary !important;
+}
+
+.card-body {
+  padding: 0.5rem 0.5rem !important;
+}
+.border-raac {
+  border-radius: 0.2rem 0;
+}
+.rounded-5 {
+  border-radius: 1rem;
+}
+.pt-18 {
+  padding-top: 18rem;
+}
+.pointer {
+  cursor: pointer;
+}
+.button-app {
+  font-weight: 600;
+  color: $color-white;
+  background-color: $bg-dark;
+  &:hover {
+    transition: all 0.2s linear;
+    color: $bg-dark;
+    background-color: $color-white;
+    border: 1px solid $bg-dark;
+  }
+}
+.button-app-outline {
+  font-weight: 600;
+  background-color: $color-white;
+  border: 1px solid $bg-dark;
+  &:hover {
+    transition: all 0.2s linear;
+    color: $bg-dark;
+    color: $color-white;
+    background-color: $bg-dark;
+  }
+}
+.activeList {
+  color: $bg-third !important;
+  border-bottom: 3px solid $bg-third;
+}
+a:hover {
+  color: $bg-third;
+}
+.w-30 {
+  width: 30%;
+}
+.w-200 {
+  width: 20%;
+}
+.button-secondary {
+  font-weight: 600;
+  color: $color-white;
+  background-color: $bg-primary;
+  &:hover {
+    transition: all 0.2s linear;
+    color: $color-white;
+    background-color: $bg-third;
+  }
+}
+.cart-ani-zom {
+  animation-name: anizom;
+  animation-duration: 0.5s;
+  // transition: ani-zom 0.5s linear;
+}
+
+.cart-ani-zom {
+  animation-name: anizom;
+  animation-duration: 0.5s;
+  transition: ani-zom 0.5s linear;
+}
+
+@keyframes anizom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

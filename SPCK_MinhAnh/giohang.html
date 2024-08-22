@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <title>index</title>
+  </head>
+  <body> 
+    <header class="container-fluid header">
+      <div class="header-main container">
+        <div class="row py-2">
+          <div class="header-logo col"><img src="/View/layout/images/logo-anna.svg" alt=""></div>
+          <nav class="navbar navbar-expand-sm col-8">
+            <div class="collapse navbar-collapse justify-content-center align-items-center gap-2" id="collapsibleNavbar">
+              <ul class="navbar-nav"></ul>
+              <li class="nav-item list-style-none"><a class="nav-link fz-1 text-dark fw-600" href="#">TRANG CHỦ  </a></li>
+              <li class="nav-item list-style-none"><a class="nav-link fz-1 text-dark fw-600" href="#">VỀ ANNA </a></li>
+              <li class="nav-item dropdown list-style-none"><a class="nav-link fz-1 text-dark fw-600 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">SẢN PHẨM </a>
+                <ul class="dropdown-menu">
+                  <li class="list-style-none"><a class="dropdown-item" href="#">Gọng kính </a></li>
+                  <li class="list-style-none"><a class="dropdown-item" href="#">Kính áp tròng</a></li>
+                  <li class="list-style-none"><a class="dropdown-item" href="#">Gọng kính trẻ em  </a></li>
+                  <li class="list-style-none"><a class="dropdown-item" href="#">Tròng kính  </a></li>
+                  <li class="list-style-none"><a class="dropdown-item" href="#">Kính râm   </a></li>
+                </ul>
+              </li>
+              <li class="nav-item list-style-none"><a class="nav-link fz-1 text-dark fw-600" href="#">STORE                </a></li>
+              <li class="nav-item list-style-none"><a class="nav-link fz-1 text-dark fw-600" href="#">BLOG                </a></li>
+              <li class="nav-item list-style-none"><a class="nav-link fz-1 text-dark fw-600" href="#">HÀNH TRÌNH TỰ TẾ                </a></li>
+            </div>
+          </nav>
+          <div class="header-right col d-flex align-items-center justify-content-end">
+            <div class="header-icon d-flex gap-4">
+              <ion-icon class="text-dark fz-16 header-icon_item" name="search-outline"></ion-icon>
+              <ion-icon class="text-dark fz-16 header-icon_item" name="person-circle-outline"></ion-icon>
+              <ion-icon class="text-dark fz-16 header-icon_item" name="cart-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header_title container-fluid bg-dark">
+      <div class="header_title-content container py-3">
+        <div class="header_title-text d-flex justify-content-center align-item-center fz-1 text-white fw-200">SEE BETTER THAN YESTERDAY - ANNA LOVE YOU!</div>
+      </div>
+    </div>
+    <section class="viewCart-body container"> 
+      <div class="viewCart-body-main row row-cols-2 py-5"> 
+        <div class="viewCart-body-left col-8">
+          <div class="viewCart-body-left-header row fz-1 text-dark fw-600 py-3">
+            <div class="col-5"><span>Thông tin sản phẩm </span></div>
+            <div class="col flex-center"><span>Giá </span></div>
+            <div class="col flex-center"><span>Số lượng  </span></div>
+            <div class="col flex-center"><span>Tổng cộng</span></div>
+          </div>
+          <div class="viewCart-body-left-main border-top border-bottom">
+            <div class="viewCart-product row py-3 text-dark fz-1 flex-center position-relative">
+              <div class="col viewCar-img flex-center"><img class="img-cover" src="./images/product-1.jpg" alt=""/></div>
+              <div class="col viewCar-name flex-center"><span>GK - 380CK071</span></div>
+              <div class="col viewCar-price flex-center"><span>342,000₫</span></div>
+              <div class="col viewCar-quatity flex-center">
+                <input class="section-detail-primary-right-ship-number text-dark fz-1 border-0 w-30" type="number" name="" value="1"/>
+              </div>
+              <div class="col viewCar-total flex-center"><span>342,000₫</span></div>
+              <div class="viewCart-iconDelete position-absolute top-0 end-0 pointer">
+                <ion-icon class="text-danger bg-white p-2 rounded-circle" name="trash-outline"> </ion-icon>
+              </div>
+            </div>
+          </div>
+          <div class="viewCart-body-left-footer py-3 d-flex gap-2"><a class="btn button-secondary" href="">Tiếp tục mua hàng</a><a class="btn button-secondary" href="">Xóa tất cả sản phẩm </a></div>
+        </div>
+        <div class="viewCart-body-right col-4">
+          <div class="viewCart-body-right-header border-bottom"> <span class="viewCart-body-right-title fz-1 text-dark fw-600 py-3 flex-center">Thông tin thanh toán </span></div>
+          <div class="viewCart-body-right-total_1 py-5 border-bottom d-flex gap-2"><span class="text-dark fz-1 fw-500">Tạm tính:</span><span class="text-dark fz-1 fw-500">900.000đ</span></div>
+          <div class="viewCart-body-right-total_2 py-5 d-flex gap-2"><span class="text-dark fz-1 fw-600">Tổng cộng:</span><span class="text-dark fz-1 fw-600">900.000đ</span></div>
+          <div class="viewCart-body-right-footer py-3 d-flex gap-2"><a class="btn button-secondary" href="">Tiến hành thanh toán</a></div>
+          <div class="payment d-flex flex-column gap-3 py-3"><span class="flex-center text-dark fw-600 fz-1">Chúng tôi chấp nhận thanh toán </span>
+            <div class="payment-icon d-flex gap-2 flex-center">  <img src="./images/visa-1.png" alt=""><img src="./images/visa-2.png" alt=""><img src="./images/visa-3.png" alt=""><img src="./images/visa-4.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer pt-5">
+      <section class="footer-top container-fluid">
+        <div class="footer-top_header container d-flex justify-content-between border-bottom border-white py-3">
+          <div class="footer-top_header__left">
+            <div class="footer-top_header__logo">
+              <div class="footer-top_header__img"> <img src="/View/layout/images/logo-text.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="footer-top_header__right d-flex align-items-center gap-4">
+            <div class="footer-top_header__email"> 
+              <input class="footer-top_header__input fz-08 fw-500 text-white py-1 ps-1 border-2 rounded" type="email" placeholder="Enter your email">
+            </div>
+            <div class="footer-top_header__signup">
+              <button class="button btn-sm border-white text-white" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top_body container py-3">
+          <div class="row footer-bottom_content">
+                <div class="col footer-bottom_item d-flex flex-column gap-2">
+                  <h3 class="fz-1 fw-500">TẤT CẢ SẢN PHẨM </h3><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">GỌNG KÍNH </a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">TRÒNG KÍNH</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">KÍNH GÂM </a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">GỌNG KÍNH TRẺ EM </a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">KÍNH ÁP TRÒNG</a>
+                </div>
+                <div class="col footer-bottom_item d-flex flex-column gap-2">
+                  <h3 class="fz-1 fw-500">HỖ TRỢ</h3><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Tình trạng đặt hàng</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Vận chuyển và giao hàng</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Hoàn trả</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Lựa chọn thanh toán</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Số dư thẻ quà tặng</a>
+                </div>
+                <div class="col footer-bottom_item d-flex flex-column gap-2">
+                  <h3 class="fz-1 fw-500">VỀ  CHĂM  SÓC </h3><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Tin tức</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Nghề nghiệp</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Nhà đầu tư</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Mục đích</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Sự bền vững</a>
+                </div>
+                <div class="col footer-bottom_item d-flex flex-column gap-2">
+                  <h3 class="fz-1 fw-500">CÔNG TY</h3><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Về công ty</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Liên hệ chúng tôi</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Sản phẩm</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Blog</a><a class="fz-08 text-white text-decoration-none justify-content-start" href="#">Về Anna</a>
+                </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-bottom container-fluid">
+        <div class="footer-bottom_body container d-flex justify-content-between py-2">
+          <div class="footer-bottom_right">
+            <div class="footer-bottom_social">
+              <div class="footer-bottom_icon d-flex gap-3"><a href="http://"> 
+                  <ion-icon class="text-white fz-12 footer-bottom_icon__item" name="logo-facebook"></ion-icon></a><a href="http://">    
+                  <ion-icon class="text-white fz-12 footer-bottom_icon__item" name="logo-instagram"></ion-icon></a><a href="http://">     
+                  <ion-icon class="text-white fz-12 footer-bottom_icon__item" name="logo-twitter"></ion-icon></a><a href="http://"> 
+                  <ion-icon class="text-white fz-12 footer-bottom_icon__item" name="logo-linkedin"></ion-icon></a></div>
+            </div>
+          </div>
+          <div class="footer-bottom_left d-flex align-items-center">
+            <p class="footer-bottom_left__content fz-1 fw-200">© 2023 bởi mắt kính Anna tự hào được cộng tác với các chuyên gia hàng đầu trong lĩnh vực</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

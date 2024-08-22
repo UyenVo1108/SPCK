@@ -1,0 +1,37 @@
+include mixins
+footer.footer.pt-5
+    section.footer-top.container-fluid
+        .footer-top_header.container.d-flex.justify-content-between.border-bottom.border-white.py-3
+            .footer-top_header__left
+                .footer-top_header__logo
+                    .footer-top_header__img 
+                        img(src="/View/layout/images/logo-text.svg", alt="")
+            .footer-top_header__right.d-flex.align-items-center.gap-4
+                .footer-top_header__email 
+                    input(type="email" placeholder="Enter your email").footer-top_header__input.fz-08.fw-500.text-white.py-1.ps-1.border-2.rounded
+                .footer-top_header__signup
+                    button.button.btn-sm.border-white.text-white(type="button") Sign Up
+        .footer-top_body.container.py-3
+            .row.footer-bottom_content
+                +contentFooter("TẤT CẢ SẢN PHẨM ","GỌNG KÍNH ","TRÒNG KÍNH","KÍNH GÂM ","GỌNG KÍNH TRẺ EM ","KÍNH ÁP TRÒNG")
+                +contentFooter("HỖ TRỢ","Tình trạng đặt hàng","Vận chuyển và giao hàng","Hoàn trả","Lựa chọn thanh toán","Số dư thẻ quà tặng")
+                +contentFooter("VỀ  CHĂM  SÓC ","Tin tức","Nghề nghiệp","Nhà đầu tư","Mục đích","Sự bền vững")
+                +contentFooter("CÔNG TY","Về công ty","Liên hệ chúng tôi","Sản phẩm","Blog","Về Anna")
+
+    section.footer-bottom.container-fluid
+        .footer-bottom_body.container.d-flex.justify-content-between.py-2
+            .footer-bottom_right
+                .footer-bottom_social
+                    .footer-bottom_icon.d-flex.gap-3
+                        a(href="http://") 
+                            ion-icon(name='logo-facebook').text-white.fz-12.footer-bottom_icon__item
+                        a(href="http://")     
+                            ion-icon(name='logo-instagram').text-white.fz-12.footer-bottom_icon__item
+                        a(href="http://")      
+                            ion-icon(name='logo-twitter').text-white.fz-12.footer-bottom_icon__item
+                        a(href="http://")  
+                            ion-icon(name='logo-linkedin').text-white.fz-12.footer-bottom_icon__item
+            .footer-bottom_left.d-flex.align-items-center
+                p.footer-bottom_left__content.fz-1.fw-200 © 2023 bởi mắt kính Anna tự hào được cộng tác với các chuyên gia hàng đầu trong lĩnh vực
+           
+

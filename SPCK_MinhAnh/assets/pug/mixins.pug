@@ -1,0 +1,100 @@
+mixin contentFooter(title,t1,t2,t3,t4,t5)
+    .col.footer-bottom_item.d-flex.flex-column.gap-2
+        h3.fz-1.fw-500= title
+        a.fz-08.text-white.text-decoration-none.justify-content-start(href="#")= t1
+        a.fz-08.text-white.text-decoration-none.justify-content-start(href="#")= t2
+        a.fz-08.text-white.text-decoration-none.justify-content-start(href="#")= t3
+        a.fz-08.text-white.text-decoration-none.justify-content-start(href="#")= t4
+        a.fz-08.text-white.text-decoration-none.justify-content-start(href="#")= t5  
+mixin product(img,title,price_old,price_new,view)
+    .section-product-item.col.py-3
+        a(href="#").unlink
+            .card.border-white.rounded-3.position-relative
+                img.card-img-top.img-fluid(src= img , alt="alt")
+                .card-body.d-flex.flex-column.gap-2
+                    h3.fz-1.text-dark.fw-600.mb-0= title 
+                    .card-price.d-flex.gap-2
+                        del.card-price-old.text-dark-80.fz-08= price_old 
+                        del.text-dark-80.fz-08 đ
+                        .card-price-new.text-dark.fz-08= price_new
+                        span.text-dark.fz-08 đ
+                    .card-view.d-flex.gap-2
+                        ion-icon.card-view-icon.text-dark.fz-08(name='eye-outline')
+                        .card-view-text.fz-08.text-dark= view
+                        span.text-dark.fz-08 view
+                    .card-quatity.d-flex.gap-2
+                        span.card-quantity-content.text-dark.fz-08 Số lượng
+                        input(type="number" name="quantity" value="1").w-200.border-0    
+                a(href="#").d-flex.justify-content-end
+                    button.btn-cart.p-2.bg-primary.border-raac
+                        ion-icon(name='cart').text-white.fz-1
+                .sticker-sale.position-absolute.top-0.start-0.px-3.py-2.border-raac.bg-danger.fw-500 
+                    span SALE        
+
+mixin customerItem(img,name,comment)
+    .col-md-4
+        .card
+            img.card-img-top(src= img alt='alt')
+            .card-body
+                h5.fw-600.color-primary.text-center.card-title.fz-16= name
+                p.card-text.fz-12.text-dark.text-center= comment
+mixin questionItem(summary,text)
+    .col-sm-6.question-body-Item.pt-3    
+        details.p-2.rounded.border-dark
+            summary.text-dark.fz-12.fw-500= summary 
+            p.text-dark.fz-1.fw-400.pt-2= text
+mixin bannerTitle(title,list1,list2)
+    .bannerTitle.container-fuild    
+        .bannerTitle-content.container.pt-18.pb-3.d-flex.flex-column.gap-2
+            h3.bannerTitle-content-title.fw-700.fz-3= title 
+            .bannerTitle-content-list.d-flex.gap-2.fz-12
+                span.bannerTitle-content-list-main= list1
+                .bannerTitle-content-list-secon.d-flex.align-items-center.gap-2
+                    ion-icon(name="ellipse").color-primary
+                    span.bannerTitle-content-list-secon= list2
+mixin productList(title,p1,p2,p3,p4,p5)
+    .store-body-left-content.d-flex.flex-column.gap-2
+        span.store-body-left-title.fz-12.fw-600= title 
+        a(href="http://").store-body-left-list.unlink.fz-1.text-dark= p1
+        a(href="http://").store-body-left-list.unlink.fz-1.text-dark= p2
+        a(href="http://").store-body-left-list.unlink.fz-1.text-dark= p3
+        a(href="http://").store-body-left-list.unlink.fz-1.text-dark= p4
+        a(href="http://").store-body-left-list.unlink.fz-1.text-dark= p5
+mixin product-Item(name,priceold,pricenew)
+    .col.productItem.rounded-3.pb-4
+        a(href="http://").card.unlink.bg-white.border-0.rounded-3.productItem-top
+            img.card-img-top.img-fluid(src=("/View/layout/images/product-2.jpg") , alt="alt")
+            .sticker-sale.top-0.start-0.px-3.py-2.border-raac.bg-danger.fw-500.unlink.text-white
+                span SALE 
+            button.productItem-addcart.bg-primary.rounded-3.p-3.flex-center.gap-1.text-white.fz-1.fw-600 
+                ion-icon(name="cart-outline")
+                span Thêm giỏ hàng
+        .card-body.d-flex.flex-column.gap-2.border-0.rounded-bottom.bg-white
+            h3.fz-14.text-dark.fw-600.mb-0.text-center= name
+            .card-price.d-flex.gap-2.flex-center
+                del.card-price-old.text-dark-80.fz-1= priceold
+                del.text-dark-80.fz-1 đ
+                .card-price-new.text-dark.fz-1.fw-500= pricenew
+                span.text-dark.fz-1.fw-500  đ
+mixin policyItem(icon,title,text)
+     .col.section-detail-secondary-right-Items  
+        .col.section-detail-secondary-right-Item.text-dark.d-flex.flex-column.gap-2    
+            .section-detail-secondary-right-Item-title.d-flex.align-items-center.gap-2
+                ion-icon(name= icon).fz-2.fw-600
+                span.fz-08.fw-600= title
+            .section-detail-secondary-right-Item-content.fz-08.lh-base 
+                span=text
+mixin viewCart-product(img,name,priceOld,total)
+    .viewCart-product.row.py-3.text-dark.fz-1.flex-center.position-relative
+        .col.viewCar-img.flex-center
+            img(src= img, alt="").img-cover
+        .col.viewCar-name.flex-center
+            span= name
+        .col.viewCar-price.flex-center
+            span= priceOld
+        .col.viewCar-quatity.flex-center
+            input(type="number", name="" value="1").section-detail-primary-right-ship-number.text-dark.fz-1.border-0.w-30
+        .col.viewCar-total.flex-center
+            span= total
+        .viewCart-iconDelete.position-absolute.top-0.end-0.pointer
+            ion-icon(name="trash-outline").text-danger.bg-white.p-2.rounded-circle 

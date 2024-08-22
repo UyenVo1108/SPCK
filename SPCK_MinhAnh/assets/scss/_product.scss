@@ -1,0 +1,25 @@
+@import "variables";
+.bannerTitle {
+  background-image: url(./View/layout/images/banner_title.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.productItem-top {
+  position: relative;
+  .sticker-sale {
+    position: absolute;
+  }
+  .productItem-addcart {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px); /* Dịch chuyển nút xuống 20px để ẩn đi */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng transition */
+  }
+}
+.productItem-top:hover .productItem-addcart {
+  opacity: 1;
+  transform: translateY(0); /* Trả lại vị trí ban đầu */
+}

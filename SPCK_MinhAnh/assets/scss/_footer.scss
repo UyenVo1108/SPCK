@@ -1,0 +1,33 @@
+@import "variables";
+.footer {
+  &-top {
+    background-color: $bg-primary;
+  }
+  &-top_header__input::placeholder {
+    color: $body-color;
+  }
+  &-top_header__input {
+    border: 0.1rem solid $color-white;
+  }
+  .button {
+    padding: 0.5rem;
+    border: 0.1rem solid $color-white;
+    background-color: $bg-primary;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.346);
+      transition: all 0.2s linear;
+    }
+  }
+  &-bottom {
+    background-color: $bg-third;
+  }
+  &-bottom_icon__item {
+    padding: 0.3rem;
+    box-shadow: 2px -5px 4px 0px rgba(0, 0, 0, 0.5) inset,
+      0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset;
+    border-radius: 50%;
+  }
+  &-bottom_left__content {
+    display: contents;
+  }
+}

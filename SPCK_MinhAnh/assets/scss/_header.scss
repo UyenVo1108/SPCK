@@ -1,0 +1,12 @@
+@import "variables";
+header {
+  background-color: $bg-secondary;
+}
+.header {
+  &-icon_item {
+    cursor: pointer;
+  }
+}
+.user-submenu {
+  display: none;
+}

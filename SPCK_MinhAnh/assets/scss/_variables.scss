@@ -1,0 +1,24 @@
+// đặt biến
+$body-color: #f8f8f8;
+$bg-third: #006f75;
+$bg-dark: #000000;
+$bg-primary: #009d90;
+$bg-secondary: #fff7de;
+$color-white: white;
+$bg-dark-50: rgba(217, 217, 217, 0.396);
+@mixin absoluteCenter($direction: "left") {
+  position: absolute;
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $direction == "top" {
+    left: 50%;
+    transform: translateY(-50%);
+  }
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
