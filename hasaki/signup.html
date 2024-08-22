@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>https://www.signup.com</title>
+    <link
+    rel="stylesheet"
+    href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="assets/css/app.css" /> 
+    <style>
+       .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+.error-message{
+  color: red;
+}
+    </style>
+</head>
+<body> 
+  <div
+      class="offcanvas offcanvas-top"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div
+        class="offcanvas-body d-flex justify-content-center align-items-center"
+      >
+        <form class="d-flex w-50 justify-content-center" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="d-block btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/download.png" alt="" width="50" height="50"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-6 fw-medium"
+                  aria-current="page"
+                  href="#"
+                  >Trang Chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-6 fw-medium"
+                  aria-current="page"
+                  href="#"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-6 fw-medium"
+                  aria-current="page"
+                  href="#"
+                  >Liên hệ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-6 fw-medium"
+                  aria-current="page"
+                  href="#"
+                  >Mỹ phẩm</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-6 fw-medium"
+                  aria-current="page"
+                  href="#"
+                  >Mặt Nạ</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Chăm sóc tóc
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Dầu gội</a></li>
+                  <li><a class="dropdown-item" href="#">Kem xả</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"></li>
+            </ul>
+            <div
+              class="header-top-right d-flex align-items-center gap-3 fs-6 fw-medium"
+            >
+            <div
+            href=""
+            class="d-flex align-items-center gap-2 hover-list cursor"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasSearch"
+            aria-controls="offcanvasTop"
+          >
+            <ion-icon class="fs-4" name="search"></ion-icon>
+            <span>Search</span>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown hover-list">
+              <a
+                class="account nav-link d-flex align-items-center gap-2"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <ion-icon class="fs-4" name="person"></ion-icon>
+                <span>Account</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#!signup">Register</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#!checkout">Checkout</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#!setting">Settings</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="login.html">Login</a>
+                  </li>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a
+          href="shop.html"
+          class="d-flex text-decoration-none text-dark align-items-center gap-2 hover-list cursor"
+        >
+          <ion-icon class="fs-4" name="heart"></ion-icon>
+          <span>Wishlist</span>
+        </a>
+              <div
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                id="cart-click"
+                href=""
+                class="header-top-right-item header-cart d-flex align-items-center gap-2 hover-list cursor"
+              >
+                <!-- <span class="quality px-2 fs-6 rounded-5 bg-primary text-white"
+            >1</span
+          > -->
+                <ion-icon class="fs-4 fw-bold" name="cart"></ion-icon>
+                <span>Cart</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src="https://images.unsplash.com/photo-1531646317777-0619c7c5d1d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form>
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                  <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-success    btn-floating mx-1">
+                    <ion-icon class="fs-4" name="logo-facebook"></ion-icon>
+                  </button>
+      
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-success    btn-floating mx-1">
+                    <ion-icon class="fs-4" name="logo-google"></ion-icon>
+
+                  </button>
+      
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-success    btn-floating mx-1">
+                    <ion-icon class="fs-4" name="logo-linkedin"></ion-icon>
+
+                  </button>
+                </div>
+      
+                <div class="divider d-flex align-items-center my-4">
+                  <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                </div>
+                <div class="mt-2">
+                  <label class="form-label" for="firstname">First name</label>
+                  <input class="form-control"  type="text" id="firstname" />
+                  <div id="firstname-error" class="error-message "></div>
+                </div>
+                <div class="mt-2">
+                  <label class="form-label" for="lastname">Last name</label>
+                  <input class="form-control" type="text" id="lastname" />
+                  <div id="lastname-error" class="error-message "></div>
+                </div>
+                <div class="mt-2">
+                  <label class="form-label" for="email">Email </label>
+                  <input class="form-control" type="email" id="email" required />
+                  <div id="email-error" class="error-message "></div>
+                </div>
+                <div class="mt-2">
+                  <label class="form-label" for="password">Password</label>
+                 
+                  <div class="input-group mb-3">
+                    <input class="form-control" class="input-pass" type="password" id="password" />
+                    <span class="input-group-text" id="basic-addon2"><ion-icon
+                        id="eye"
+                        class="input-icon "
+                        name="eye-outline"
+                        ></ion-icon></span>
+                  </div>
+                  <div id="password-error" class="error-message "></div>
+                </div>
+                <div class="mt-2">
+                  <label class="form-label" for="passwordconfirm">Password Confirm</label>
+      
+                  <input class="form-control" id="passwordConfirm" type="password" />
+                  <div id="passwordConfirm-error" class="error-message "></div>
+                </div>
+                <button type="submit" class="w-100 btn btn-success mt-3" id="submit">Đăng kí</button>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                      class="link-danger">Login</a></p>
+                </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="footer-content col-lg-3 col-sm-6">
+              <h3 class="text-white">Contact Us</h3>
+              <p class="text-white">Email: Inform@gmail.com</p>
+              <p class="text-white">Phone: +121 5655 5655</p>
+              <p class="text-white">Address: Huynh Thi Hai street</p>
+            </div>
+            <div class="footer-content col-lg-3 col-sm-6">
+              <h3 class="text-white">Quick Link</h3>
+              <ul class="list">
+                <li><a class="text-white" href="">Home</a></li>
+                <li><a class="text-white" href="">About</a></li>
+                <li><a class="text-white" href="">Services</a></li>
+                <li><a class="text-white" href="">Products</a></li>
+                <li><a class="text-white" href="">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-content col-lg-3 col-sm-6">
+              <h3 class="text-white">Quick Link</h3>
+              <ul class="list">
+                <li><a class="text-white" href="">Home</a></li>
+                <li><a class="text-white" href="">About</a></li>
+                <li><a class="text-white" href="">Services</a></li>
+                <li><a class="text-white" href="">Products</a></li>
+                <li><a class="text-white" href="">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-content col-lg-3 col-sm-6">
+              <h3 class="text-white">Follow Us</h3>
+              <ul class="social-icons">
+                <li>
+                  <a class="text-white" href=""
+                    ><ion-icon class="fs-3" name="logo-facebook"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a class="text-white" href=""
+                    ><ion-icon class="fs-3" name="logo-instagram"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a class="text-white" href=""
+                    ><ion-icon class="fs-3" name="logo-twitter"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a class="text-white" href=""
+                    ><ion-icon class="fs-3" name="logo-linkedin"></ion-icon
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-bar">
+          <p class="text-white">&copy; 2024 your company.All rights reserved</p>
+        </div>
+      </footer>
+      <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="./assets/js/signup.js"></script>
+</body>
+</html>

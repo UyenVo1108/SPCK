@@ -1,0 +1,110 @@
+{
+    "sanpham": [
+        { 
+            "id": 1, 
+            "name": "Serum dưỡng ẩm", 
+            "image": "img/9.jpg",
+            "price": 375000, 
+            "priceOld": 449000,
+            "sale":true,
+            "category": "kem"
+          },
+          { 
+            "id": 2, 
+            "name": "Kem chống nắng", 
+            "image": "img/14.jpg",
+            "price": 264000, 
+            "priceOld": 300000,
+            "sale":false,
+            "category": "kem"
+          },
+          { 
+            "id": 3, 
+            "name": "Son dưỡng môi", 
+            "image": "img/13.jpg",
+            "price": 200000, 
+            "priceOld": 283000,
+            "category": "son"
+          },
+          { 
+            "id": 4, 
+            "name": "Bộ chống lão hóa", 
+            "image": "img/11.jpg",
+            "price": 899000, 
+            "priceOld": 999000,
+            "category": "kem"
+          },
+          { 
+            "id": 5, 
+            "name": "Mặt nạ giấy", 
+            "image": "img/16.png",
+            "price": 52800, 
+            "priceOld": 52800,
+            "category": "matna"
+          }
+          ,
+          { 
+            "id": 6, 
+            "name": "Bảng phấn mắt", 
+            "image": "img/17.jpg",
+            "price": 420600, 
+            "priceOld": 504000,
+            "category": "phan"
+          }
+          ,
+          { 
+            "id": 7, 
+            "name": "Kem dưỡng da tay", 
+            "image": "img/18.jpg",
+            "price": 289800, 
+            "priceOld": 310000 ,
+            "category": "kem"
+          }
+          ,
+          { 
+            "id": 8, 
+            "name": "Toner cân bằng da", 
+            "image": "img/20.jpg",
+            "price": 339600, 
+            "priceOld": 405000,
+            "category": "kem"
+          }
+          ,
+          { 
+            "id": 9, 
+            "name": "Sữa tắm dưỡng thể", 
+            "image": "img/28.jpg",
+            "price": 599400, 
+            "priceOld": 740000,
+            "category": "suatam"
+          }
+          ,
+          { 
+            "id": 10, 
+            "name": "Combo mặt nạ giấy", 
+            "image": "img/22.jpg",
+            "price": 429000, 
+            "priceOld": 500000,
+            "category": "matna"
+          }
+          ,
+          { 
+            "id": 11, 
+            "name": "Mặt nạ đất sét", 
+            "image": "img/19.jpg",
+            "price": 450000, 
+            "priceOld": 360000,
+            "category": "matna"
+          }
+          ,
+          { 
+            "id": 12, 
+            "name": "Son lì dạng thỏi", 
+            "image": "img/23.png",
+            "price": 285000, 
+            "priceOld": 343500,
+            "category": "son"
+          }
+    ]
+     
+  }
