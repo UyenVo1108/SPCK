@@ -1,0 +1,51 @@
+header.py-4
+    .container.border.rounded-10.border-light.shadow-primary
+        .d-flex.align-items-center.justify-content-between.px-5 
+            .header-logo 
+                img(src="/layout/images/logo.png", alt="alt")
+            nav.navbar.navbar-expand-lg
+                .container-fluid
+                    ul.navbar-nav.d-flex.gap-3
+                        li.nav-item
+                            a.nav-link.active.text-color.fz-text-b1.fw-600(aria-current='page' href='#') Home
+                        li.nav-item.dropdown
+                            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.fw-600.text-color.fz-text-b1(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                | Shop
+                            ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                                li
+                                    a.text-color.fz-text-b1.dropdown-item.py-2.fw-600(href='#') Action
+                                li
+                                    a.text-color.fz-text-b1.dropdown-item.py-2.fw-600(href='#') Another action
+                                li
+                                    a.text-color.fz-text-b1.dropdown-item.py-2.fw-600(href='#') Something else here
+                        li.nav-item
+                            a.text-color.fz-text-b1.nav-link.fw-600(href='#') Blog
+                        li.nav-item
+                            a.text-color.fz-text-b1.nav-link.fw-600(href='#') Contact
+                    ul.sidebar.d-flex.flex-column.align-items-start.justify-content-start
+                        li.list-unstyled.d-flex.justyfy-content-end.hideSidebar-icon
+                            ion-icon(name="close-outline").fz-h3.hideSidebar
+                        li.list-unstyled
+                            a(href="") 
+                                img(src="/layout/images/logo.png", alt="alt")
+                        li.list-unstyled
+                            a(href="#").py-3.text-color.fz-text-b1.dropdown-item.py-2.fw-600 Home   
+                        li.list-unstyled
+                            a(href="#").py-3.text-color.fz-text-b1.dropdown-item.py-2.fw-600 Shop   
+                        li.list-unstyled
+                            a(href="#").py-3.text-color.fz-text-b1.dropdown-item.py-2.fw-600 About   
+                        li.list-unstyled
+                            a(href="#").py-3.text-color.fz-text-b1.dropdown-item.py-2.fw-600 Contact   
+            .header-list.d-flex.align-items-center.gap-3
+                .header-search.d-flex.align-items-center.border.rounded.gap-2.hide-mobile
+                    ion-icon(name="search-outline").text-color.fz-text-b1.py-2.ps-2
+                    input(type="text", name="").border-0.py-2.fz-text-b2.pe-2
+                .header-icon.d-flex.align-items-center.gap-2
+                    a(href="").unlink
+                        ion-icon(name="heart-outline").text-color.fz-h4
+                    a(href="").unlink
+                        ion-icon(name="cart-outline").text-color.fz-h4
+                    a(href="").unlink.fz-text-b1
+                        ion-icon(name="person-outline").text-color.fz-h4
+                    .hamburger
+                        ion-icon(name="grid-outline").text-color.fz-h4

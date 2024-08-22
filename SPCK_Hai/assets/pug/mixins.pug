@@ -1,0 +1,80 @@
+mixin category(img,text)
+    a(href="").unlink.col-2.category-item.rounded-3.border-light.border
+        .category-content.p-5.d-flex.flex-column.align-items-center.gap-3
+            .category-images 
+                img(src=img, alt="")
+            span.fz-text-b1.text-color.fw-500=text
+mixin product-list 
+     .product-item
+        .product-header
+            .img-product.overflow-hidden
+                img(src="./images/product-1.webp", alt="").img-cover
+            .tag-sale 
+                span.text-white.fw-700.bg-primary.py-1.px-4.fz-text-b3.rounded-2 Sale
+            .product-list.d-flex.align-items-center.gap-3
+                a(href="").unlink.flex-center 
+                    ion-icon(name="cart-outline").product-list-icon.p-2.fz-h5.text-color.bg-white.rounded-2 
+                a(href="").unlink    
+                    +button-primary("Buy Product")
+                a(href="").unlink.flex-center  
+                    ion-icon(name="eye-outline").product-list-icon.p-2.fz-h5.text-color.bg-white.rounded-2 
+        .product-body.pt-4.d-flex.flex-column.gap-3
+            .name-product
+                .text-gray.fz-h6 3D™ wireless headset
+            .price-product.d-flex.gap-2.fz-h4.fw-600 
+                .price-old.text-decoration-line-through.text-dark
+                    span $
+                    span 500
+                .price-sale.text-color
+                    span $
+                    span 480    
+mixin product-secondary
+    .product-item
+        .row.px-3.py-3.rounded-3.border-light.border.d-flex.align-items-center.product-secondary 
+            .col-3
+                .img-product.rounded-3.overflow-hidden
+                    img(src="./images/product-1.webp", alt="alt")
+            .col-6.d-flex.flex-column.gap-3
+                .product-secondary-name 
+                    a(href="#").unlink.fz-text-b1.text-color 3D™ wireless headset
+                .price-product-secondary.d-flex.gap-2.fz-h4.fw-600 
+                    .price-old.text-decoration-line-through.text-dark
+                        span $
+                        span 500
+                    .price-sale.text-color
+                        span $
+                        span 480    
+            .col-3.d-flex.flex-column.gap-3
+                a(href="").product-secondary-button.border.flex-center.rounded-3
+                    button.py-2.px-4 
+                        ion-icon(name="heart-outline").fz-text-b1 
+                a(href="").product-secondary-button.border.flex-center.rounded-3
+                    button.py-2.px-4 
+                        ion-icon(name="cart-outline").fz-text-b1 
+mixin whyUs(img,text)
+    .col-xl-3.col-lg-4.col-md-6.col-sm-12
+        .whyUs-item.p-5.d-flex.flex-column.justify-content-center.gap-3.border.rounded-10.product-secondary 
+            .whyUs-img.flex-center
+                img(src=img, alt="")
+            .whyUs-title
+                h3.fz-h5.text-center=text
+                
+                
+    
+mixin section-direction(text1,text2,text3)
+    section 
+        .container-fuild.bg-third
+            .container 
+                .row.py-5.d-flex.align-items-center 
+                    .col.header-direction-left.d-flex.flex-column.gap-3  
+                        .direction-list.d-flex.align-items-center.gap-2 
+                            a(href="#").unlink
+                                span.fz-text-b1.border-end.pe-2.border-2=text1
+                            span.text-color.fz-text-b1=text2
+                        h3.direction-title.text-color.fz-h2.fw-500 Explore All Products
+                    .col.header-direction-right
+                        .direction-images.d-flex.justify-content-end.row 
+                            .col-9 
+                            .col-3  
+                                img(src="/layout/images/product-45.webp", alt="").img-cover
+                        

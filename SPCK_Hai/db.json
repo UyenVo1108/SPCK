@@ -1,0 +1,104 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "name": "Bàn phím Akko 3087",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "bàn phím",
+      "hot": true,
+      "description": "Bàn phím cơ AKKO 3087 RF Dragon Ball Z Goku Cream Blue Switch là phiên bản dành cho những fan cuồng yêu thích truyện Dragon Ball Z. Sản phẩm bàn phím AKKO này với gam màu cam ấn tượng góp phần tô điểm thêm sự nổi bật cho thiết kế độc quyền này.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/b/a/ban-phim-co-akko-3087-rf-dragon-ball-z-goku-cream.png"
+    },
+    {
+      "id": "2",
+      "name": "Bàn Phím FL-Esports",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "bàn phím",
+      "hot": false,
+      "description": "Bàn phím cơ không dây FL-Esports FL980 SAM Cercis được trang bị bộ Switch Kailh cao cấp cùng hot swap để mang tới trải nghiệm gõ phím tốt cũng như dễ dàng thay thế khi cần thiết. Với thiết kế layout 98 phím cùng hệ thống LED RGB, bàn phím FL-Esports FL980 SAM Cercis vừa tiết kiệm diện tích, vừa giúp không gian làm việc, giải trí nổi bật hơn.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/b/a/ban-phim-co-khong-day-fl-esports-fl980-sam-cercis_1_.png"
+    },
+    {
+      "id": "3",
+      "name": "Bàn phím Monsgeek MG75",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "bàn phím",
+      "hot": true,
+      "description": "Bàn phím cơ AKKO MonsGeek MG75 Prunus Lannesiana (Cream Blue Switch) sở hữu vẻ ngoài gọn nhẹ, đẹp mắt cùng màu sắc tổng thể được phối rất năng động. Đây là sản phẩm bàn phím AKKO mới được ra mắt và gây được sự chú ý của người dùng.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/b/a/ban-phim-co-akko-monsgeek-mg75-prunus-lannesiana-1.png"
+    },
+    {
+      "id": "4",
+      "name": "Bàn phím Dareu EK75",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "bàn phím",
+      "hot": false,
+      "description": "Bàn phím cơ Dareu EK75 Dream Switch tích hợp bộ công tắc cơ học DAREU customized Dream, đảm bảo hoạt động ổn định ở tần suất cao với tốc độ phản hồi nhanh. Sản phẩm được phối màu độc đáo với hiệu ứng đèn LED Rainbow chiếu sáng tích hợp. Với layout 75%, mẫu bàn phím Dareu này giữ lại các tính năng quan trọng trong khi giảm kích thước, cùng với khả năng kết nối vô cùng đa dạng.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/b/a/ban-phim-co-dareu-ek75-dream-switch-1.png"
+    },
+    {
+      "id": "5",
+      "name": "Bàn phím cơ E-DRA",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "bàn phím",
+      "hot": false,
+      "description": "Bàn phím cơ E-Dra không dây EK368L WH Red Switch được trang bị bộ keycap hoàn thiện từ chất liệu nhựa cứng cáp và công nghệ in DoubleShot siêu bền. Với Red Switch, bàn phím mang lại độ ổn định và phản hồi xúc giác ấn tượng. Đặc biệt, sản phẩm bàn phím E-Dra hỗ trợ đa kết nối với cả kết nối 2.4Ghz và Bluetooth, mang lại sự linh hoạt trong sử dụng.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/b/a/ban-phim-co-e-dra-khong-day-ek368l-wh-red-switch_2_.png"
+    },
+    {
+      "id": "6",
+      "name": "Chuột Razer Basilisk",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "chuột",
+      "hot": true,
+      "description": "Sảm phẩm chuột chơi game này sở hữu thiết kế thông minh mang đến cho người dùng trải nghiệm cuộn liền mạch và vô song. Bạn có thể cho phép nó tự động chuyển đổi giữa các chế độ hoặc là chuyển đổi giữa ba chế độ bổ sung như: Tactile Scrolling, Smart-Reel, và Free-Spin Scrolling.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/_/0/_0003_chu_t_razer_basilisk_v3.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Bàn phím cơ EK361W",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "bàn phím",
+      "hot": true,
+      "description": "Bàn phím cơ không dây E-dra EK361W Snow Yellow Switch trang bị công nghệ kết nối Bluetooth 5.0 với khả năng chuyển đổi linh hoạt 3 thiết bị cùng lúc. Hệ thống LED RGB tích hợp trên bàn phím E-dra tha hồ chiếu sáng với pin sạc với dung lượng lên tới 1200mAh. Đặc biệt, keycap phong cách độc đáo lấy ý tưởng từ núi 'Fansipan' Việt Nam. ",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/b/a/ban-phim-co-khong-day-e-dra-ek361w-snow-yellow-switch_2_.png"
+    },
+    {
+      "id": "8",
+      "name": "Chuột Logitech G304",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "chuột",
+      "hot": true,
+      "description": "Chuột gaming không dây Logitech G304 Lightspeed là sản phẩm đang làm mưa làm gió trên thị trường với nhiều tính năng đặc biệt nổi bật. Với nhiều công phá mới trong thiết kế cùng mức giá thành tương đối rẻ sản phẩm chuột Logitech đã sẵn sàng để mọi người dùng trải nghiệm.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/_/t_i_xu_ng_36__2.png"
+    },
+    {
+      "id": "9",
+      "name": "Chuột Signature M650",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "chuột",
+      "hot": true,
+      "description": "Không chỉ mang ngoại hình tinh tế phù hợp nơi công sở, mà còn tích hợp nút cuộn thông minh và công nghệ giảm ồn khi nhấn, chuột không dây Logitech Signature M650 size L sẽ giúp nâng cao năng suất làm việc trên máy tính của bạn và đồng hành dài lâu.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/_/t_i_xu_ng_36__2.png"
+    },
+    {
+      "id": "10",
+      "name": "Chuột Logitech G402 ",
+      "price": 100000,
+      "priceold": 120000,
+      "category": "chuột",
+      "hot": true,
+      "description": "Nếu bạn là một game thủ và đang muốn tìm kiếm một con chuột với những cú click vô cùng ấn tượng thì chuột gaming Logitech G402 Hyperion Fury Ultra sẽ là lựa chọn tuyệt vời dành cho bạn. Sở hữu thiết kế mạnh mẽ, mượt mà cùng tốc độ cực nhanh chắc chắn chúng sẽ mang đến cho người dùng cảm nhận vô cùng ấn tượng.",
+      "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/c/h/chuot-choi-game-co-day-logitech-g402-hyperion-fury-ultra-1.jpg"
+    }
+  ]
+}
