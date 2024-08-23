@@ -364,7 +364,7 @@
             <input type="number" value="1" max="10" min="1" class="fs-5 ms-2" />
           </div>
           <div class="btn-addcart">
-            <div class="btn btn-success fw-bolder btn px-5">Add to cart</div>
+            <div class="btn btn-success fw-bolder btn px-5" id="addToCartButton">Add to cart</div>
           </div>
         </div>
       </div>
@@ -451,7 +451,22 @@
         bigImg.src = pic;
       }
     </script>
+   <script>
+     const addToCartButton = document.getElementById("addToCartButton");
+    const cartQuantityElement = document.getElementById("quantity");
 
+    // Kiểm tra và khởi tạo số lượng giỏ hàng trong localStorage
+    let cartQuantity = parseInt(localStorage.getItem("cartQuantity")) || 0;
+    cartQuantityElement.innerText = cartQuantity; // Hiển thị số lượng ban đầu
+
+    // Xử lý sự kiện nhấn nút "Add to cart"
+    addToCartButton.addEventListener("click", () => {
+      cartQuantity += 1; // Tăng số lượng giỏ hàng
+      cartQuantityElement.innerText = cartQuantity; // Cập nhật số lượng hiển thị
+      localStorage.setItem("cartQuantity", cartQuantity); // Lưu số lượng vào localStorage
+    });
+
+   </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
