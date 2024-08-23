@@ -40,7 +40,7 @@
             "image": "img/16.png",
             "price": 52800, 
             "priceOld": 52800,
-            "category": "matna"
+            "category": "mặt nạ"
           }
           ,
           { 
@@ -76,7 +76,7 @@
             "image": "img/28.jpg",
             "price": 599400, 
             "priceOld": 740000,
-            "category": "suatam"
+            "category": "sữa tắm"
           }
           ,
           { 
@@ -85,7 +85,7 @@
             "image": "img/22.jpg",
             "price": 429000, 
             "priceOld": 500000,
-            "category": "matna"
+            "category": "mặt nạ"
           }
           ,
           { 
@@ -94,7 +94,7 @@
             "image": "img/19.jpg",
             "price": 450000, 
             "priceOld": 360000,
-            "category": "matna"
+            "category": "mặt nạ"
           }
           ,
           { 
