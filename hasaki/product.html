@@ -452,10 +452,11 @@
       }
     </script>
    <script>
+     // Xử lí nút add to cart
      const addToCartButton = document.getElementById("addToCartButton");
     const cartQuantityElement = document.getElementById("quantity");
 
-    // Kiểm tra và khởi tạo số lượng giỏ hàng trong localStorage
+   // Kiểm tra và khởi tạo số lượng giỏ hàng trong localStorage
     let cartQuantity = parseInt(localStorage.getItem("cartQuantity")) || 0;
     cartQuantityElement.innerText = cartQuantity; // Hiển thị số lượng ban đầu
 
@@ -463,7 +464,7 @@
     addToCartButton.addEventListener("click", () => {
       cartQuantity += 1; // Tăng số lượng giỏ hàng
       cartQuantityElement.innerText = cartQuantity; // Cập nhật số lượng hiển thị
-      localStorage.setItem("cartQuantity", cartQuantity); // Lưu số lượng vào localStorage
+      localStorage.setItem("cartQuantity", cartQuantity); 
     });
 
    </script>
